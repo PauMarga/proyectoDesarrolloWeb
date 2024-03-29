@@ -99,47 +99,21 @@
 }
 
 .galeria{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 3fr 0.5fr 3fr;
-    grid-template-areas:
-    "titulo1"
-    "carrousel1"
-    "titulo2"
-    "carrousel2";
-    align-content: center;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-items: center;
-    color: #393E46;
+}
+
+h4{
+    padding: 50px;
     font-size: 20px;
     font-family: "Julius Sans One", sans-serif;
 }
 
-.titulo1{
-    grid-area: titulo1;
-}
-
-.carrousel1{
-    grid-area: carrousel1;
-}
-
-.titulo2{
-    grid-area: titulo2;
-}
-
-.corrousel2{
-    grid-area: carrousel2;
-}
-
-.imagenOpaca{
-    width: 500px;
-    opacity: 0.5;
-}
-
-.imagenOpaca:hover{
-    opacity: 1;
+.tamanoCarrousel{
+    width: 700px;
 }
 
 .yo{
@@ -162,6 +136,7 @@
 
 .hola{
     grid-area: hola;
+    margin-right: 30px;
 }
 
 .texto{
@@ -171,6 +146,7 @@
     font-size: 20px;
     font-family: "Julius Sans One", sans-serif;
     text-align: center;
+    margin-right: 30px;
 }
 
 .cuadros{
@@ -188,6 +164,7 @@
     color: #393E46;
     font-size: 20px;
     font-family: "Julius Sans One", sans-serif;
+    margin-top: 20px;
 }
 
 .imagenCuadro1{
@@ -208,6 +185,7 @@
 
 .imagenCuadro{
     width: 500px;
+    padding: 10px;
 }
 
 .contacto{
@@ -274,6 +252,11 @@
     margin-left: 45%;
 }
 
+input:focus{
+    background-color: black;
+    color: white;
+}
+
 h2{
     color: black;
     font-size: 15px;
@@ -305,6 +288,9 @@ h2{
         height: 100px;
         width: 300px;
         margin: 10px;
+    }
+    .texto{
+        margin-left: 10px;
     }
 }
 
@@ -344,6 +330,14 @@ h2{
         padding: 10px;
     }
 
+    .tamanoCarrousel{
+        width: 500px;
+    }
+
+    .imagenOpaca{
+        width: 450px;
+    }
+
     .yo{
         height: 100vh;
     }
@@ -360,10 +354,11 @@ h2{
         "cuadro1"
         "descripcion2"
         "cuadro2";
+        height: 200vh;
         }
         
     .imagenCuadro{
-        width: 300px;
+        width: 500px;
     }
 
     .contacto{
@@ -395,17 +390,37 @@ h2{
     .logo{
         width: 80px;
     }
-    
+
+    .tamanoCarrousel{
+        width: 350px
+    }
+
+    .imagenOpaca{
+        width: 350px;
+    }
+
     .yo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
+    }
+    
+    .texto{
+        margin-left: 30px;
     }
 
     .foto{
         width: 300px;
+    }
+
+    .imagenCuadro{
+        width: 400px;
+    }
+
+    .cuadros{
+        font-size: 15px;
     }
 
     .formulario{
