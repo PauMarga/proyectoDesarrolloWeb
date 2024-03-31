@@ -56,12 +56,22 @@
     grid-area: lista5;
 }
 
-.fotoInstagram{
-    width: 15%;
+#toggle{
+    display: none;
 }
 
 .logo{
     width: 130px;
+}
+
+.logoMenuHamburguesa{
+    width: 100px;
+    display: none;
+}
+
+.menuImagen{
+    width: 40px;
+    display: none;
 }
 
 .foto{
@@ -92,6 +102,10 @@
 .instagram{
     grid-area: instagram;
     text-align: center;
+}
+
+.fotoInstagram{
+    width: 15%;
 }
 
 .mail{
@@ -295,15 +309,61 @@ h2{
 }
 
 @media (max-width: 768px) {
-    .lista{
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(4,1fr);
-    grid-template-areas:
-    "lista3 lista1"
-    "lista3 lista2"
-    "lista3 lista4"
-    "lista3 lista5";
+    nav{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas: 
+        "logo toggle"
+        "logo menuImagen"
+        "logo lista";
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin-top: 10px;
+        height: 180px;
+    }    
+    .lista{ 
+        width: 150px; 
+        height: 0px; 
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-area: lista;
+        margin-right: 10px;
+        background-color: white;
+        border-radius: 0.4rem;
     }
+    .logo{
+        display: none;
+    }
+    .menuImagen { 
+        display: inline-flex; 
+        color: white; 
+        cursor: pointer;
+        grid-area: menuImagen;
+    } 
+    .logoMenuHamburguesa{ 
+        display: flex; 
+        color: white; 
+        cursor: pointer;
+        grid-area: logo;
+        width: 150px;
+        margin-left: 110px;
+    } 
+
+    #toggle{ 
+        display: inline-flex; 
+        color: white; 
+        cursor: pointer;
+        grid-area: toggle;
+        display: none;
+    } 
+
+    #toggle:checked ~ .lista{ 
+        height: 750%; 
+    } 
 
     .footer{
         display: flex;
@@ -367,6 +427,7 @@ h2{
         justify-content: center;
         align-items: center;
         padding: 10px;
+        margin-top: 20px;
     }
 
     .formulario{
@@ -385,8 +446,11 @@ h2{
 
 @media (max-width: 425px) {
     .lista li a{
-        font-size: 10px;
+        font-size: 15px;
     }
+    #toggle:checked ~ .lista{ 
+        height: 600%; 
+    } 
     .logo{
         width: 80px;
     }
